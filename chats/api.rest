@@ -1,0 +1,15 @@
+# POST  http://localhost:8000/regis
+# Content-Type: application/json
+
+# {
+#     "username": "Asliddin",
+#     "password": "123" 
+# }
+
+# POST  http://localhost:8000/login
+# Content-Type: application/json
+
+# {
+#     "username": "Asliddin",
+#     "password": "123"
+# }
