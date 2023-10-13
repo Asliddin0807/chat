@@ -52,7 +52,7 @@ const getUserRoom = asyncHandler(async(req, res) => {
         res.status(404).json({ message: 'Room is not defined!' })
     }
 
-    res.status(200).json({ message: 'Success!', data: find })
+    res.status(200).json({ message: 'Success!', data: find.member })
 })
 
 const deleteRoom = asyncHandler(async(req, res) => {

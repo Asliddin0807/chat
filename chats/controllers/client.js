@@ -55,11 +55,30 @@ const getMychats = asyncHandler(async(req, res) => {
     res.status(200).json({ message: 'Success', data: findUser.myChats })
 })
 
+const searchUsers = asyncHandler(async(req, res) => {
+    const { username } = req.body
+    const findUser = await Client.findOne({ username: username })
+    if(findUser){
+        res.status(200).json({ message: 'Success!', data: findUser })
+    }else{
+        res.status(404).json({ message: 'User is not defined!'})
+    }
+})
 
+// const getReciew = asyncHandler(async(req, res) => {
+//     const { id } = req.query
+//     const find = await Client.findById({ _id: id })
+//     if(!find){
+//         res.status(404).json({ message: 'Useer is not defined!' })
+//     }
+
+//     res.status(200).json({ message: 'Success!', data:  })
+// })
 
 module.exports = {
     regis,
     login,
     getUser,
-    getMychats
+    getMychats,
+    searchUsers
 }

@@ -5,6 +5,6 @@ const { authMiddleWare } = require('../middleware/authMiddleWare')
 
 router.post('/createRoom', authMiddleWare, createRoom)
 router.post('/getRoom', getUserRoom)
-router.post('/delete_room', deleteRoom)
+router.post('/delete_room',  deleteRoom)
 
 module.exports = router
